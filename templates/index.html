@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Read A While Books</title>
+</head>
+<body>
+    <h1>Welcome to Read A While Books!</h1>
+    <a href="{{ url_for('add') }}">Add a new book</a>
+    <a href="{{ url_for('search') }}">Search for a book</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+                <tr>
+                    <td>{{ book['id'] }}</td>
+                    <td>{{ book['Title'] }}</td>
+                    <td>{{ book['Author'] }}</td>
+                    <td>{{ book['Qty'] }}</td>
+                    <td>
+                        <a href="{{ url_for('update', id=book['id']) }}">Update</a>
+                        <form action="{{ url_for('delete', id=book['id']) }}" method="post" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="footer">
+        <p>Designed by Lucille Jordaan &copy; {{ current_year }}</p>
+    </div>
+</body>
+</html>

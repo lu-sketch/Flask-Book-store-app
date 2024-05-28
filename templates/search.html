@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Search Book</title>
+</head>
+<body>
+    <h1>Search for a book by ID</h1>
+    <form method="post">
+        <label for="id">Book ID:</label>
+        <input type="text" id="id" name="id" required>
+        <button type="submit">Search</button>
+    </form>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
+    {% if book %}
+        <h2>Book Details</h2>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <td>{{ book['id'] }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ book['Title'] }}</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>{{ book['Author'] }}</td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td>{{ book['Qty'] }}</td>
+            </tr>
+        </table>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Back to book list</a>
+</body>
+<div class="footer">
+    <p>Designed by Lucille Jordaan &copy; {{ current_year }}</p>
+</div>
+</html>

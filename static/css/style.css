@@ -1,0 +1,148 @@
+/* This is general css styling for all the html pages */
+
+
+/* styling for body of each page */
+body {
+    background-color: #f8f0e3;
+    font-family: 'Garamond', serif;
+    color: #5d4037;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+}
+
+/* styling for header top of each page */
+h1 {
+    font-family: 'Merriweather', serif;
+    color: #3e2723;
+    font-size:80px ;
+}
+
+/* styling for rest of headers */
+h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: #3e2723;
+    font-size: larger;
+}
+
+/* styling for container */
+.container {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* styling for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+
+table, th, td {
+    border: 1px solid #d7ccc8;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #d7ccc8;
+    color: #3e2723;
+}
+
+/* styling for forms */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #3e2723;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+}
+
+/* styling for buttons */
+btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #8e3d3d;
+    background-color: #5d4037;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.btn:hover {
+    background-color: #3e2723;
+    color: rgba(219, 235, 226, 0.538);
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: #795548;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: #3e2723;
+}
+
+.flash {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #d32f2f;
+    background-color: #ffccbc;
+    color: #d32f2f;
+    border-radius: 4px;
+}
+
+
+
+/* Footer style */
+.footer {
+    background-color: #795548;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
