@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, redirect, url_for, flash
+from urllib.parse import quote as url_quote
 import sqlite3
 from datetime import datetime
 
