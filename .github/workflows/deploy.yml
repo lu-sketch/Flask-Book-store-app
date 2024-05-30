@@ -25,7 +25,7 @@ jobs:
 
     - name: Deploy to Render
       env:
-        RENDER_API_KEY: ${{ secrets.https://flask-book-store-app-i0t7.onrender.com }}
+        RENDER_API_KEY: ${{ secrets.staging }}
       run: |
         curl -X POST "https://api.render.com/v1/services/rnd_8YD0g8rYGNpshjMefbk0cGw362Mp/deploys" \
         -H "Authorization: Bearer $https://flask-book-store-app-i0t7.onrender.com \
