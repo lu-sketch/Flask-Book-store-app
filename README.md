@@ -10,9 +10,6 @@ This project is a Flask application based on the original Python program that us
 - Addition of routes for adding, updating, searching, and deleting books.
 - Styling using CSS to enhance the user interface.
 
-## Original Code
-The original Python program using SQLite can be found in the [original-code](original-code) directory.
-
 ## Modifications
 - Converted the original program into a Flask application.
 - Created HTML templates for rendering pages.
